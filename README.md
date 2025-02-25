@@ -32,13 +32,13 @@ pip install flask requests py_zipkin
 ## Run the Server
 
 ```
-python server.py
+python src/server.py
 ```
 
 ## Run the Client
 
 ```
-python client.py
+python src/client.py
 ```
 
 ## View Traces
