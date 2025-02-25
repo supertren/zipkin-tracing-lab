@@ -5,6 +5,7 @@ A hands-on lab to explore distributed tracing with Zipkin using a Python client 
 ## Prerequisites
 
 - Python 3.x
+- flask
 - Docker
 - Git
 
