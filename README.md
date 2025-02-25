@@ -10,10 +10,6 @@ A hands-on lab to explore distributed tracing with Zipkin using a Python client 
 
 ## Setup
 
-Install Dependencies
-
-```pip install flask requests py_zipkin```
-
 ## Clone the Repo
 
 ```
@@ -23,15 +19,27 @@ cd zipkin-tracing-lab
 
 ## Start Zipkin
 
-```docker run -d -p 9411:9411 openzipkin/zipkin```
+```
+docker run -d -p 9411:9411 openzipkin/zipkin
+```
+
+## Install Dependencies (if necessary)
+
+```
+pip install flask requests py_zipkin
+```
 
 ## Run the Server
 
-```python server.py```
+```
+python server.py
+```
 
 ## Run the Client
 
-```python client.py```
+```
+python client.py
+```
 
 ## View Traces
 
@@ -50,11 +58,21 @@ Trace sent to Zipkin successfully
 
 Verify Zipkin:
 
-```docker ps```
+```
+docker ps
+```
+
+Stop Zipkin dockers:
+
+```
+docker stop $(docker ps -q --filter ancestor=openzipkin/zipkin)
+```
 
 Restart Zipkin:
 
-```docker run -d -p 9411:9411 openzipkin/zipkin```
+```
+docker run -d -p 9411:9411 openzipkin/zipkin
+```
 
 Open Firewall (if needed):
 
