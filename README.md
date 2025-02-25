@@ -20,7 +20,7 @@ cd zipkin-tracing-lab
 ## Start Zipkin
 
 ```
-docker run -d -p 9411:9411 openzipkin/zipkin
+sudo docker run -d -p 9411:9411 openzipkin/zipkin
 ```
 
 ## Install Dependencies (if necessary)
@@ -65,13 +65,13 @@ docker ps
 Stop Zipkin dockers:
 
 ```
-docker stop $(docker ps -q --filter ancestor=openzipkin/zipkin)
+sudo docker stop $(docker ps -q --filter ancestor=openzipkin/zipkin)
 ```
 
 Restart Zipkin:
 
 ```
-docker run -d -p 9411:9411 openzipkin/zipkin
+sudo docker run -d -p 9411:9411 openzipkin/zipkin
 ```
 
 Open Firewall (if needed):
